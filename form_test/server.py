@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, session
+from env import key
 app = Flask(__name__)
-app.secret_key = "keep it secret, keep it safe" # Set a Secret Key for Security Purposes. Also it should be a long random byte or str.
+app.secret_key = key  # Set a Secret Key for Security Purposes.
 
 
 @app.route('/')
